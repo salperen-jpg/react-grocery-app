@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Noto Sans Mono', monospace;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f28ab2;
+}
+
+.container {
+  border-radius: 10px;
+  padding: 1rem;
+  display: grid;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 90vw;
+  max-width: 35rem;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  text-align: center;
+}
+.form-elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-elements input {
+  padding: 0.25rem;
+
+  padding-left: 0.7rem;
+  border-color: transparent;
+  font-size: 1rem;
+  flex: 1 0 auto;
+  outline: none;
+  border-radius: 3px;
+  background-color: #d3d3d3;
+}
+
+.primary-btn {
+  border: none;
+  border-radius: 3px;
+  background-color: hsl(205, 86%, 81%);
+  flex: 0 0 5rem;
+  display: grid;
+  align-items: center;
+  padding: 0.4rem;
+  margin-left: 0.3rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.grocery-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+  transition: all 0.2s linear;
+  padding: 0.3rem;
+  border-radius: 3px;
+}
+.grocery-item:hover {
+  background-color: #f28ab2;
+}
+
+.grocery-item i {
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+.delete-btn {
+  color: red;
+  border: none;
+  margin-left: 0.3rem;
+  cursor: pointer;
+}
+
+.edit-btn {
+  color: green;
+  border: none;
+  cursor: pointer;
+}
+
+.clear-btn-container {
+  text-align: center;
+}
+.clear-btn {
+  border: none;
+  margin-top: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  background-color: #f28ab2;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.alert {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  border-radius: 3px;
+  padding: 0.3rem;
+}
+.success {
+  background-color: green;
+}
+
+.danger {
+  background-color: red;
 }
